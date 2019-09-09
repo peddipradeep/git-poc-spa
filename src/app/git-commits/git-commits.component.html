@@ -1,0 +1,32 @@
+<html>
+<head>
+  <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<!--p> List of Git commits </p>
+<p> <a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/">Git Repository for Pierian-Data Python</a></p-->
+<!--div class="container"-->c
+  <div *ngIf="gitCommitsData">
+    <table style="width: 100%">
+      <th>Commit message</th>
+      <th>Commit Date</th>
+      <th>Commit url</th>
+      <th>Committer</th>
+      <tr *ngFor="let commitObj of gitCommitsData.gitcommits">
+        <td>{{ commitObj.commit.message }}</td>
+        <td>{{ commitObj.commit.committer.date | date: 'short'}}</td>
+        <td><a href="{{ commitObj.url }}">Commit URL</a></td>
+        <td>{{ commitObj.committer.login }}</td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="!gitCommitsData">
+    No commits found
+  </div>
+<!--/div-->
+</body>
+</html>

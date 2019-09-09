@@ -5,14 +5,15 @@ import { Observable } from "rxjs/Observable";
 @Injectable({
   providedIn: 'root'
 })
-export class GitListService {
+export class GitCommitsService {
+
   // private url = "https://api.github.com/repos/starksecurity/Pierian-Data-Complete-Python-3-Bootcamp/labels"
-  private url = "https://api.github.com/repos/StratacentPOC/GitRepo/labels"
   // private url = "https://api.github.com/repos/starksecurity/Pierian-Data-Complete-Python-3-Bootcamp/commits"
+  private url = "https://api.github.com/repos/StratacentPOC/GitRepo/commits"
   
   constructor(private http: HttpClient) { }
 
-  getGitInfo(): Observable<any> {
+  getGitCommits(): Observable<any> {
 
     return this.http.get<any>(this.url);
 

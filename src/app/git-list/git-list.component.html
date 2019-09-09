@@ -1,44 +1,3 @@
-<!--<div *ngIf="pokemonData">
-
-  <ul>
-
-    <li *ngFor="let pokemon of pokemonData.pokemons">
-
-      <span>{{pokemon.id}}</span>
-
-    </li>
-
-  </ul>
-
-</div> -->
-
-<!-- <html>
-<head>
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-</style>
-</head>
-<body>
-<div class="container">
-    <div *ngIf="pokemonData">
-        <table>
-            <tr *ngFor="let pokemon of pokemonData.pokemons">
-                <td>{{ pokemon.id }}</td>
-                <td>{{ pokemon.url }}</td>
-                <td><a [href]={{ pokemon.url }}>Angular Docs</a></td>
-                <td>{{ pokemon.name }}</td>
-            </tr>
-        </table>
-    </div>
-    <div *ngIf="!pokemonData">
-        No labels found
-    </div> 
-</div>
-</body>
-</html> -->
-
 <html>
 <head>
 <style>
@@ -48,24 +7,26 @@ table, th, td {
 </style>
 </head>
 <body>
-<p> List of Git commits </p>
+<!--p> List of Git Labels </p>
 <p> <a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/">Git Repository for Pierian-Data Python</a></p>
-<div class="container">
-    <div *ngIf="gitData">
-        <table>
-        	<th>Label Id</th>
-        	<th>Label Name</th>
-        	<th>Label url</th>
-            <tr *ngFor="let git of gitData.gitlist">
-                <td>{{ git.id }}</td>
-                <td>{{ git.name }}</td>
-                <td><a href="{{ git.url }}">Label URL</a></td>
-            </tr>
-        </table>
-    </div>
-    <div *ngIf="!gitData">
-        No labels found
-    </div> 
+<div class="container"-->
+<div *ngIf="gitData">
+  <table style="width:100%">
+    <tr>
+      <th>Label Id</th>
+      <th>Label Name</th>
+      <th>Label Url</th>
+    </tr>
+    <tr *ngFor="let git of gitData.gitlist">
+      <td>{{ git.id }}</td>
+      <td>{{ git.name}}</td>
+      <td><a href="{{ git.url }}">Label URL</a></td>
+    </tr>
+  </table>
 </div>
+<div *ngIf="!gitData">
+  No labels found
+</div>
+
 </body>
 </html>

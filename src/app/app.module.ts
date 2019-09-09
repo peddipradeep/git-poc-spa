@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitListComponent } from './git-list/git-list.component';
+import { GitCommitsComponent } from './git-commits/git-commits.component';
+import { GitTagsComponent } from './git-tags/git-tags.component';
 import { GitListService } from './gitlist.service';
 import { GitDetailsComponent } from './git-details/git-details.component';
 
@@ -12,7 +14,9 @@ import { GitDetailsComponent } from './git-details/git-details.component';
   declarations: [
     AppComponent,
     GitListComponent,
-    GitDetailsComponent
+    GitTagsComponent,
+    GitDetailsComponent,
+    GitCommitsComponent
   ],
   imports: [
     BrowserModule,
