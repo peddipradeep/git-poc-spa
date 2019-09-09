@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitCommitsService } from "../gitcommits.service";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'git-commits',
@@ -9,13 +10,15 @@ import { GitCommitsService } from "../gitcommits.service";
 export class GitCommitsComponent implements OnInit {
   private gitCommitsData: any;
   
-  constructor(private svc: GitCommitsService) { }
+  constructor(private svc: GitCommitsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  	this.svc.getGitCommits().subscribe(data => {
-  		this.gitCommitsData= {'gitcommits':data};
-  		console.log("data is ----->"+JSON.stringify(data));
-  		console.log("gitData is ----->"+JSON.stringify(this.gitCommitsData));
+  this.route.paramMap.subscribe(params => {
+      this.svc.getGitCommits(params.get('branch_name')).subscribe(data => {
+        this.gitCommitsData= {'gitcommits':data};
+        console.log("data is ----->"+JSON.stringify(data));
+        console.log("gitData is ----->"+JSON.stringify(this.gitCommitsData));
+      });
   	});
   }
 

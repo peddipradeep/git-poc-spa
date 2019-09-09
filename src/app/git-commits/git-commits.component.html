@@ -9,10 +9,11 @@ table, th, td {
 <body>
 <!--p> List of Git commits </p>
 <p> <a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/">Git Repository for Pierian-Data Python</a></p-->
-<!--div class="container"-->c
-  <div *ngIf="gitCommitsData">
+<!--div class="container"-->
+<p>Git Commits/ {{branch_name}}</p>
+<div *ngIf="gitCommitsData">
     <table style="width: 100%">
-      <th>Commit message</th>
+      <th>Commit messages</th>
       <th>Commit Date</th>
       <th>Commit url</th>
       <th>Committer</th>

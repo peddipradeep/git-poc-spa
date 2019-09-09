@@ -9,6 +9,7 @@ import { GitCommitsComponent } from './git-commits/git-commits.component';
 import { GitTagsComponent } from './git-tags/git-tags.component';
 import { GitListService } from './gitlist.service';
 import { GitDetailsComponent } from './git-details/git-details.component';
+import { GitBranchesComponent } from './git-branches/git-branches.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GitDetailsComponent } from './git-details/git-details.component';
     GitListComponent,
     GitTagsComponent,
     GitDetailsComponent,
-    GitCommitsComponent
+    GitCommitsComponent,
+    GitBranchesComponent
   ],
   imports: [
     BrowserModule,
