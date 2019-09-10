@@ -19,6 +19,7 @@ table, th, td {
     <tr *ngFor="let git of gitBranchesData.gitbranches">
       <td>{{ git.name }}</td>
       <!--td><a href="{{ git.commit.url }}">Commits URL</a></td-->
+      <!--td><a href="{{ git.commit.url }}">Commits URL</a></td-->
       <a [routerLink] = "['/gitcommits', git.commit.sha]">Git Commits</a>
     </tr>
   </table>
