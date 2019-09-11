@@ -16,6 +16,11 @@ export class GitCommitsComponent implements OnInit {
   this.route.paramMap.subscribe(params => {
       this.svc.getGitCommits(params.get('branch_name')).subscribe(data => {
         this.gitCommitsData= {'gitcommits':data};
+        if(params.get('branch_name'))
+          this.gitCommitsData.branch_name = params.get('branch_name');
+        else
+          this.gitCommitsData.branch_name = 'All';
+
         console.log("data is ----->"+JSON.stringify(data));
         console.log("gitData is ----->"+JSON.stringify(this.gitCommitsData));
       });

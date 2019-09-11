@@ -8,29 +8,29 @@ import { GitBranchesComponent } from './git-branches/git-branches.component';
 const routes: Routes = [
 
 	{
-    		path: "gitbranches",
-    		component: GitBranchesComponent
-  },
+      path: "gitbranches",
+      component: GitBranchesComponent
+    },
 	{
 		path: "gitlabels",
 		component: GitListComponent
 	},
 	{
-	    path: "",
-	    redirectTo: "/gitlabels",
-	    pathMatch: "full"
+	  path: "",
+	  redirectTo: "/gitbranches",
+	  pathMatch: "full"
 	},
 	{
-  		path: "gitcommits",
-  		component: GitCommitsComponent
-  },
+      path: "gitcommits",
+      component: GitCommitsComponent
+    },
+    {
+      path: "gitcommits/:branch_name",
+      component: GitCommitsComponent
+    },
   {
-    		path: "gitcommits/:branch_name",
-    		component: GitCommitsComponent
-  },
-  {
-    		path: "gittags",
-    		component: GitTagsComponent
+    path: "gittags",
+    component: GitTagsComponent
    }
 
 ];

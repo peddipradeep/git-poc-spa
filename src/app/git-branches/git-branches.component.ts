@@ -13,6 +13,12 @@ export class GitBranchesComponent implements OnInit {
 
   ngOnInit() {
   	this.svc.getGitBranches().subscribe(data => {
+  	  var i=0
+  	  data.forEach(function (value) {
+  	  console.log('value ---> '+value)
+  	  i = i+1;
+      value.id=i;
+      });
   		this.gitBranchesData= {'gitbranches':data};
   		console.log("data is ----->"+JSON.stringify(data));
   		console.log("gitData is ----->"+JSON.stringify(this.gitBranchesData));

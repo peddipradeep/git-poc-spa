@@ -1,22 +1,22 @@
 <html>
 <head>
 <style>
-table, th, td {
-  border: 1px solid black;
-}
 </style>
 </head>
 <body>
 <!--p> List of Git Labels </p>
 <p> <a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/">Git Repository for Pierian-Data Python</a></p>
 <div class="container"-->
-<div *ngIf="gitData">
-  <table style="width:100%">
+<div *ngIf="gitData" class="container">
+  <h4>Git Labels</h4>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
     <tr>
       <th>Label Id</th>
       <th>Label Name</th>
       <th>Label Url</th>
     </tr>
+    </thead>
     <tr *ngFor="let git of gitData.gitlist">
       <td>{{ git.id }}</td>
       <td>{{ git.name}}</td>

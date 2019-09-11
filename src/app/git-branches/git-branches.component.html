@@ -1,31 +1,32 @@
 <html>
 <head>
 <style>
-table, th, td {
-  border: 1px solid black;
-}
 </style>
 </head>
 <body>
-<!--p> List of Git Labels </p>
-<p> <a href="https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/">Git Repository for Pierian-Data Python</a></p>
-<div class="container"-->
-<div *ngIf="gitBranchesData">
-  <table style="width:100%">
-    <tr>
-      <th>Branch Name</th>
-      <th>Branch Commit Url</th>
-    </tr>
+<div *ngIf="gitBranchesData" class="container">
+  <h4>Git Branches</h4>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>S.No</th>
+        <th>Branch Name</th>
+        <th>Branch Commit Url</th>
+      </tr>
+    </thead>
     <tr *ngFor="let git of gitBranchesData.gitbranches">
+      <td>{{ git.id}}</td>
       <td>{{ git.name }}</td>
       <!--td><a href="{{ git.commit.url }}">Commits URL</a></td-->
-      <a [routerLink] = "['/gitcommits', git.commit.sha]">Git Commits</a>
+      <td><a [routerLink] = "['/gitcommits', git.name]">Git Commits</a></td>
     </tr>
   </table>
 </div>
+
 <div *ngIf="!gitBranchesData">
   No Branches found
 </div>
+
 
 </body>
 </html>
