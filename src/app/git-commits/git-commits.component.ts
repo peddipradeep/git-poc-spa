@@ -15,6 +15,7 @@ export class GitCommitsComponent implements OnInit {
   ngOnInit() {
   this.route.paramMap.subscribe(params => {
       this.svc.getGitCommits(params.get('branch_name')).subscribe(data => {
+      console.log("1 ->");
         this.gitCommitsData= {'gitcommits':data};
         if(params.get('branch_name'))
           this.gitCommitsData.branch_name = params.get('branch_name');

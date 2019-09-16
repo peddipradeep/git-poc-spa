@@ -1,0 +1,27 @@
+<html>
+<head>
+  <style>
+  </style>
+</head>
+<body>
+<div *ngIf="gitSummaryData" class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-">
+      <h4>Git Summary</h4>
+    </div>
+  </div>
+  <!--<h4>Git Summary</h4>-->
+  <b>File Name: </b>{{gitSummaryData.file_name}}
+  <br>
+  <b>Updated by: </b>{{gitSummaryData.committer.name}}
+  <br>
+  <b>Updated date: </b>{{gitSummaryData.committer.date}}
+  <br>
+  <b>File content: </b><pre>{{gitSummaryData.content}}</pre>
+</div>
+<div *ngIf="!gitSummaryData">
+  No content found
+</div>
+</body>
+</html>

@@ -16,8 +16,9 @@
       <tr *ngFor="let commitObj of gitCommitsData.gitcommits">
         <td>{{ commitObj.commit.message }}</td>
         <td>{{ commitObj.commit.committer.date | date: 'short'}}</td>
-        <td><a href="{{ commitObj.url }}">Commit URL</a></td>
-        <td>{{ commitObj.committer.login }}</td>
+        <!--<td><a href="{{ commitObj.url }}">Commit URL</a></td>-->
+        <td><a [routerLink] = "['/gitcommitdetails', commitObj.sha]">Commit Details</a></td>
+        <td>{{ commitObj.commit.committer.name}}</td>
       </tr>
     </table>
   </div>

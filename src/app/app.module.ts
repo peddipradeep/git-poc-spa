@@ -10,6 +10,9 @@ import { GitTagsComponent } from './git-tags/git-tags.component';
 import { GitListService } from './gitlist.service';
 import { GitDetailsComponent } from './git-details/git-details.component';
 import { GitBranchesComponent } from './git-branches/git-branches.component';
+import { GitSummaryComponent } from './git-summary/git-summary.component';
+import { GitCommitDetailsComponent } from './git-commit-details/git-commit-details.component';
+import { GitFileSummaryDetailsComponent } from './git-file-summary-details/git-file-summary-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { GitBranchesComponent } from './git-branches/git-branches.component';
     GitTagsComponent,
     GitDetailsComponent,
     GitCommitsComponent,
-    GitBranchesComponent
+    GitBranchesComponent,
+    GitSummaryComponent,
+    GitCommitDetailsComponent,
+    GitFileSummaryDetailsComponent
   ],
   imports: [
     BrowserModule,
