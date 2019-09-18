@@ -19,7 +19,7 @@
       <td>{{ git.name }}</td>
       <!--td><a href="{{ git.commit.url }}">Commits URL</a></td-->
       <!--td><a href="{{ git.commit.url }}">Commits URL</a></td-->
-      <a [routerLink] = "['/gitcommits', git.commit.sha]">Git Commits</a>
+      <td><a [routerLink] = "['/gitcommits', git.commit.sha]">Git Commits</a></td>
     </tr>
   </table>
 </div>
