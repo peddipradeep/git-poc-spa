@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./git-commit-details.component.css']
 })
 export class GitCommitDetailsComponent implements OnInit {
-  private commitDetailsData: any;
+  public commitDetailsData: any;
 
   constructor(private svc: GitCommitDetailsService, private route: ActivatedRoute) { }
 

@@ -7,7 +7,7 @@ import { GitBranchesService } from "../gitbranches.service";
   styleUrls: ['./git-branches.component.css']
 })
 export class GitBranchesComponent implements OnInit {
-  private gitBranchesData: any;
+  public gitBranchesData: any;
   
   constructor(private svc: GitBranchesService) { }
 

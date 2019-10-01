@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class GitSummaryComponent implements OnInit {
 
-  private gitSummaryData= <any> {};
+  public gitSummaryData= <any> {};
   constructor(private svc: GitSummaryService, private route: ActivatedRoute) {}
 
 

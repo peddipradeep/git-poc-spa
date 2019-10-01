@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./git-file-summary-details.component.css']
 })
 export class GitFileSummaryDetailsComponent implements OnInit {
-  private gitSummaryData= <any> {};
+  public gitSummaryData= <any> {};
   constructor(private svc: GitSummaryService, private route: ActivatedRoute) { }
 
   ngOnInit() {

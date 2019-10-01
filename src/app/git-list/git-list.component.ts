@@ -7,7 +7,7 @@ import { GitListService } from "../gitlist.service";
   styleUrls: ['./git-list.component.css']
 })
 export class GitListComponent implements OnInit {
-  private gitData: any;
+  public gitData: any;
   
   constructor(private svc: GitListService) { }
 

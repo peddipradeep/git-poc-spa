@@ -7,7 +7,7 @@ import { GitTagsService } from "../gittags.service";
   styleUrls: ['./git-tags.component.css']
 })
 export class GitTagsComponent implements OnInit {
-  private gitTagsData: any;
+  public gitTagsData: any;
   
   constructor(private svc: GitTagsService) { }
 
