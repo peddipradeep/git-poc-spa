@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crud-angular5": {
+    "git-poc-spa": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/crud-angular5",
+            "outputPath": "dist/git-poc-spa",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "crud-angular5:build"
+            "browserTarget": "git-poc-spa:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "crud-angular5:build:production"
+              "browserTarget": "git-poc-spa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "crud-angular5:build"
+            "browserTarget": "git-poc-spa:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "crud-angular5-e2e": {
+    "git-poc-spa-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "crud-angular5:serve"
+            "devServerTarget": "git-poc-spa:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "crud-angular5:serve:production"
+              "devServerTarget": "git-poc-spa:serve:production"
             }
           }
         },
@@ -134,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "crud-angular5"
+  "defaultProject": "git-poc-spa"
 }
